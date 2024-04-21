@@ -1,17 +1,17 @@
 {
   "name": "@neoncoder/vuetify-sonner",
   "type": "module",
-  "version": "0.3.16",
+  "version": "0.3.17",
   "packageManager": "pnpm@8.15.4",
   "description": "Stackable toast component for Vuetify.",
   "author": "Bankole Esan <techybanky@gmail.com>",
   "license": "MIT",
-  "homepage": "https://github.com/bankole2000/vuetify-sonner#readme",
+  "homepage": "https://github.com/Bankole2000/vt-sonner#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bankole2000/vuetify-sonner.git"
+    "url": "git+https://github.com/Bankole2000/vt-sonner.git"
   },
-  "bugs": "https://github.com/bankole2000/vuetify-sonner/issues",
+  "bugs": "https://github.com/Bankole2000/vt-sonner/issues",
   "keywords": [
     "vuetify",
     "vue",
