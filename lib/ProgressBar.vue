@@ -25,7 +25,7 @@
   const syncProgressBar = () => {
     interval = setTimeout(() => {
       if(props.isPaused) return;
-      props.reverseProgressBar ? value.value += 120 : value.value -= 120
+      props.reverseProgressBar ? value.value += 110 : value.value -= 110
       if (value.value <= 0 && !props.reverseProgressBar){
         value.value = 0
         clearInterval(interval)

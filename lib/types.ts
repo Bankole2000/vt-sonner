@@ -22,9 +22,14 @@ export interface ToastProps {
   }
   prependIcon?: string
   prependIconProps?: ExtractProps<typeof VIcon>
-  avatar?: string
   multipleAvatars?: string[]
+  avatar?: string
   avatarProps?: ExtractProps<typeof VAvatar>
+  appendAvatar?: string
+  appendAvatarProps?: ExtractProps<typeof VAvatar>
+  appendAvatarAction?: {
+    onClick?: () => void
+  }
   progressBar?: boolean
   reverseProgressBar?: boolean
   progressDuration?: number

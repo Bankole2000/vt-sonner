@@ -15,10 +15,12 @@ import { toast } from '@/.'
       <v-btn @click="toast('This avatar is small and square', {avatar: 'https://avatars.githubusercontent.com/u/739984?v=4', avatarProps: {size: 'small', tile: true}, cardProps: {color: 'deep-purple'}})">
         Avatar Props
       </v-btn>
-      <v-btn @click="toast('Some people did a thing', {
+      <v-btn @click="toast('', {
+          
           cardProps: {
             color: 'blue'
           },
+          prependIcon: 'mdi-account-plus',
           multipleAvatars: [
             'https://randomuser.me/api/portraits/women/22.jpg',
             'https://randomuser.me/api/portraits/women/21.jpg',
@@ -29,32 +31,47 @@ import { toast } from '@/.'
             // 'https://avatars.githubusercontent.com/u/739984?v=4',
             // 'https://avatars.githubusercontent.com/u/739984?v=4'
           ],
-          description: 'Jane + 4 others did a thing',
+          avatarProps: {
+            size: 'small'
+          },
+          description: 'Jane + 4 others started following you',
           action: {
             buttonProps: {
               icon: 'mdi-arrow-right-bold',
             }
           }
         })">
-        Multiple Avatars
+        Multiple
       </v-btn>
-      <v-btn @click="toast('Several people liked your post', {
+      <v-btn @click="toast('<strong>Mary</strong>, <strong>Jane</strong>, and <strong>4 others</strong> liked your post', {
           cardProps: {
-            color: 'blue-grey-darken-4'
+            color: 'blue-grey-darken-4',
+          },
+          cardTextProps: {
+            class: 'py-3'
           },
           vertical: true,
           multipleAvatars: [
             'https://randomuser.me/api/portraits/women/25.jpg',
             'https://randomuser.me/api/portraits/women/24.jpg',
             'https://randomuser.me/api/portraits/men/20.jpg',
+            'https://randomuser.me/api/portraits/men/2.jpg',
+            'https://randomuser.me/api/portraits/men/5.jpg',
           ],
-          description: 'Mary and 4 others liked your post',
+          avatarProps: {
+            size: 'small'
+          },
+          // description: 'Mary and 4 others liked your post',
           prependIcon: 'mdi-heart',
           prependIconProps: {
             color: 'error'
           },
+          appendAvatar: 'https://picsum.photos/200',
+          appendAvatarProps: {
+            tile: true
+          }
         })">
-        Multiple With Icon
+        Append Avatar
       </v-btn>
     </div>
   </div>
