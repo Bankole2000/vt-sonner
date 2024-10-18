@@ -1,54 +1,58 @@
 <script setup lang="ts">
 import { toast } from '@/.'
 </script>
+
 <template>
   <div>
     <h2>Avatars</h2>
     <p>You can add avatars to your toast</p>
     <div class="buttons mt-2 mb-8">
-      <v-btn @click="toast('This toast has an avatar', {avatar: 'https://avatars.githubusercontent.com/u/739984?v=4'})">
+      <v-btn @click="toast('This toast has an avatar', { avatar: 'https://avatars.githubusercontent.com/u/739984?v=4' })">
         Avatar
       </v-btn>
-      <v-btn @click="toast.primary('This toast has an avatar', {avatar: 'https://avatars.githubusercontent.com/u/739984?v=4', prependIcon: '$vuetify', description: 'And an icon as well'})">
+      <v-btn @click="toast.primary('This toast has an avatar', { avatar: 'https://avatars.githubusercontent.com/u/739984?v=4', prependIcon: '$vuetify', description: 'And an icon as well' })">
         With Icon
       </v-btn>
-      <v-btn @click="toast('This avatar is small and square', {avatar: 'https://avatars.githubusercontent.com/u/739984?v=4', avatarProps: {size: 'small', tile: true}, cardProps: {color: 'deep-purple'}})">
+      <v-btn @click="toast('This avatar is small and square', { avatar: 'https://avatars.githubusercontent.com/u/739984?v=4', avatarProps: { size: 'small', tile: true }, cardProps: { color: 'deep-purple' } })">
         Avatar Props
       </v-btn>
-      <v-btn @click="toast('', {
-          
+      <v-btn
+        @click="toast('', {
+
           cardProps: {
-            color: 'blue'
+            color: 'blue',
           },
           prependIcon: 'mdi-account-plus',
           multipleAvatars: [
             'https://randomuser.me/api/portraits/women/22.jpg',
             'https://randomuser.me/api/portraits/women/21.jpg',
             'https://randomuser.me/api/portraits/men/21.jpg',
-            // 'https://randomuser.me/api/portraits/women/20.jpg',
-            // 'https://randomuser.me/api/portraits/men/20.jpg',
-            // 'https://avatars.githubusercontent.com/u/739984?v=4',
-            // 'https://avatars.githubusercontent.com/u/739984?v=4',
-            // 'https://avatars.githubusercontent.com/u/739984?v=4'
+          // 'https://randomuser.me/api/portraits/women/20.jpg',
+          // 'https://randomuser.me/api/portraits/men/20.jpg',
+          // 'https://avatars.githubusercontent.com/u/739984?v=4',
+          // 'https://avatars.githubusercontent.com/u/739984?v=4',
+          // 'https://avatars.githubusercontent.com/u/739984?v=4'
           ],
           avatarProps: {
-            size: 'small'
+            size: 'small',
           },
           description: 'Jane + 4 others started following you',
           action: {
             buttonProps: {
               icon: 'mdi-arrow-right-bold',
-            }
-          }
-        })">
+            },
+          },
+        })"
+      >
         Multiple
       </v-btn>
-      <v-btn @click="toast('<strong>Mary</strong>, <strong>Jane</strong>, and <strong>4 others</strong> liked your post', {
+      <v-btn
+        @click="toast('<strong>Mary</strong>, <strong>Jane</strong>, and <strong>4 others</strong> liked your post', {
           cardProps: {
             color: 'blue-grey-darken-4',
           },
           cardTextProps: {
-            class: 'py-3'
+            class: 'py-3',
           },
           vertical: true,
           multipleAvatars: [
@@ -59,18 +63,19 @@ import { toast } from '@/.'
             'https://randomuser.me/api/portraits/men/5.jpg',
           ],
           avatarProps: {
-            size: 'small'
+            size: 'small',
           },
           // description: 'Mary and 4 others liked your post',
           prependIcon: 'mdi-heart',
           prependIconProps: {
-            color: 'error'
+            color: 'error',
           },
           appendAvatar: 'https://picsum.photos/200',
           appendAvatarProps: {
-            tile: true
-          }
-        })">
+            tile: true,
+          },
+        })"
+      >
         Append Avatar
       </v-btn>
     </div>
