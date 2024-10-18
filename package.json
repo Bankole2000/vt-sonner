@@ -1,7 +1,7 @@
 {
   "name": "@neoncoder/vuetify-sonner",
   "type": "module",
-  "version": "0.3.20",
+  "version": "0.3.21",
   "packageManager": "pnpm@8.15.4",
   "description": "Stackable toast component for Vuetify.",
   "author": "Bankole Esan <techybanky@gmail.com>",
