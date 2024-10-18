@@ -19,7 +19,14 @@ function onClick(position: (typeof positions)[number]) {
   toast('Event has been created', {
     // vertical: true,
     // description: 'Monday, January 3rd at 6:00pm'
+    appendAvatarAction: {
+      onClick: () => {
+        window.open('https://google.com')
+      },
+    },
+    appendAvatar: 'https://avatars.githubusercontent.com/u/739984?v=4',
     action: {
+
       label: 'Close',
       buttonProps: {
         color: 'pink',
