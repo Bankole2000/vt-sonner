@@ -38,16 +38,32 @@ function createToastFunction(color: string, icon: string) {
   }
 }
 
-export const toast = Object.assign(toastFunction, {
+function dismiss(toastId?: number | string) {
+  return toastOriginal.dismiss(toastId)
+}
+
+type ToastFunction = typeof toastFunction
+type CreateToastFunction = ReturnType<typeof createToastFunction>
+type DismissFunction = typeof dismiss
+type VSonnerToast = {
+  success: CreateToastFunction
+  error: CreateToastFunction
+  warning: CreateToastFunction
+  info: CreateToastFunction
+  primary: CreateToastFunction
+  secondary: CreateToastFunction
+  dismiss: DismissFunction
+  toastOriginal: typeof toastOriginal
+} & ToastFunction
+
+export const toast: VSonnerToast = Object.assign(toastFunction, {
   success: createToastFunction('success', 'mdi-check-circle'),
   error: createToastFunction('error', 'mdi-cancel'),
   warning: createToastFunction('warning', 'mdi-alert'),
   info: createToastFunction('info', 'mdi-alert-circle'),
   primary: createToastFunction('primary', 'mdi-bell'),
   secondary: createToastFunction('secondary', 'mdi-bell'),
-  dismiss(toastId?: number | string) {
-    return toastOriginal.dismiss(toastId)
-  },
+  dismiss,
   toastOriginal,
 })
 
